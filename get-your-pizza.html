@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONE FREE PIZZA | Customize Your Pizza</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/get-your-pizza.css" />
+  </head>
+  <body onload="initializeCustomizePizza()">
+    <header>
+      <div id="logo">
+        <h1>
+          ONE<br /><span class="text-stroke-orange">FREE</span><br />PIZZA
+        </h1>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li id="nav-customize"><i class="fa-solid fa-pizza-slice"></i></li>
+          <li id="nav-orders"><i class="fa-regular fa-clipboard"></i></li>
+          <p id="nav-desc"></p>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero-banner">
+      <div id="title">
+        <h1><span class="text-stroke-orange">CUSTOMIZE</span> YOUR PIZZA</h1>
+      </div>
+    </section>
+    <main id="customize-pizza">
+      <section id="pizza-style">
+        <div id="pizza-style-content">
+          <div class="sub-heading">
+            <h2>STYLE</h2>
+            <p id="error-style">Please select a style.</p>
+          </div>
+          <div id="style-option-panel">
+            <button type="button" value="HAWAIIAN" class="style-option">
+              <div class="card-pizza">
+                <img src="./images/pizza/pizza-hawaiian.png" alt="Hawaiian" />
+                HAWAIIAN
+              </div>
+            </button>
+            <button type="button" value="PEPPERONI" class="style-option">
+              <div class="card-pizza">
+                <img src="./images/pizza/pizza-pepperoni.png" alt="Pepperoni" />
+                PEPPERONI
+              </div>
+            </button>
+            <button type="button" value="CANADIAN" class="style-option">
+              <div class="card-pizza">
+                <img src="./images/pizza/pizza-canadian.png" alt="Canadian" />
+                CANADIAN
+              </div>
+            </button>
+            <button type="button" value="SUPREME" class="style-option">
+              <div class="card-pizza">
+                <img src="./images/pizza/pizza-supreme.png" alt="Supreme" />
+                SUPREME
+              </div>
+            </button>
+            <button type="button" value="CHEESE" class="style-option">
+              <div class="card-pizza">
+                <img src="./images/pizza/pizza-chevre.png" alt="Cheese" />
+                CHEESE
+              </div>
+            </button>
+            <button type="button" value="MARGHERITA" class="style-option">
+              <div class="card-pizza">
+                <img
+                  src="./images/pizza/pizza-margherita.png"
+                  alt="Margherita"
+                />
+                MARGHERITA
+              </div>
+            </button>
+          </div>
+        </div>
+        <div id="pizza-style-img"></div>
+        <img src="./images/pizza/pizza-la-bros.png" id="rotate-style-img" />
+      </section>
+
+      <section id="pizza-crust">
+        <div id="pizza-crust-img">
+          <img
+            src="./images/pizza/pizza-saint-jean.png"
+            id="rotate-crust-img1"
+          />
+          <img
+            src="./images/pizza/pizza-alessandro.png"
+            id="rotate-crust-img2"
+          />
+        </div>
+        <div id="pizza-crust-content">
+          <div class="sub-heading">
+            <h2>CRUST</h2>
+            <p id="error-crust">Please select crust type.</p>
+          </div>
+          <div id="crust-option-panel">
+            <button type="button" value="ORIGINAL" class="crust-option">
+              <i class="fa-solid fa-pizza-slice"></i>
+              ORIGINAL
+            </button>
+            <button type="button" value="THIN" class="crust-option">
+              <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+              THIN
+            </button>
+            <button type="button" value="GLUTEN-FREE" class="crust-option">
+              <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+              GLUTEN-FREE
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="pizza-cheese">
+        <div id="pizza-cheese-content">
+          <div class="sub-heading">
+            <h2>CHEESE</h2>
+            <p id="error-cheese">Please select cheese options.</p>
+          </div>
+          <div id="cheese-option-panel">
+            <button type="button" value="ORIGINAL" class="cheese-option">
+              <i class="fa-solid fa-cheese"></i>
+              ORIGINAL
+            </button>
+            <button type="button" value="EXTRA" class="cheese-option">
+              <i class="fa-solid fa-cheese"></i
+              ><i class="fa-solid fa-cheese"></i
+              ><i class="fa-solid fa-cheese"></i>
+              EXTRA
+            </button>
+          </div>
+        </div>
+        <div id="pizza-cheese-img">
+          <img src="./images/pizza/pizza-mtl.png" id="rotate-cheese-img1" />
+          <img src="./images/pizza/pizza-texas.png" id="rotate-cheese-img2" />
+          <img
+            src="./images/pizza/pizza-4-fromages.png"
+            id="rotate-cheese-img3"
+          />
+        </div>
+      </section>
+
+      <section id="delivery">
+        <div class="sub-heading">
+          <h1>DELIVERY</h1>
+          <p id="error-delivery">Please fill in all the blanks.</p>
+        </div>
+
+        <div id="contact-line1">
+          <div>
+            <label for="contact-name">NAME</label>
+            <input type="text" name="contact-name" id="contact-name" />
+          </div>
+          <div>
+            <label for="contact-phone">PHONE</label>
+            <input type="text" name="contact-phone" id="contact-phone" />
+          </div>
+        </div>
+        <div id="contact-line2">
+          <label for="contact-address">STREET ADDRESS</label>
+          <input type="text" name="contact-address" id="contact-address" />
+        </div>
+        <div id="contact-line3">
+          <div>
+            <label for="contact-city">CITY</label>
+            <input type="text" name="contact-city" id="contact-city" />
+          </div>
+          <div>
+            <label for="contact-province">PROV</label>
+            <select name="contact-province" id="contact-province">
+              <option value="AB">AB</option>
+              <option value="BC">BC</option>
+              <option value="MB">MB</option>
+              <option value="NB">NB</option>
+              <option value="NL">NL</option>
+              <option value="NS">NS</option>
+              <option value="NT">NT</option>
+              <option value="NU">NU</option>
+              <option value="ON" selected>ON</option>
+              <option value="PE">PE</option>
+              <option value="QC">QC</option>
+              <option value="SK">SK</option>
+              <option value="YT">YT</option>
+            </select>
+          </div>
+          <div>
+            <label for="contact-postal">POSTAL CODE</label>
+            <input type="text" name="contact-postal" id="contact-postal" />
+          </div>
+        </div>
+        <button
+          type="button"
+          id="submit-order-btn"
+          onclick="confirmOrderHandler()"
+        >
+          ORDER
+        </button>
+      </section>
+    </main>
+
+    <div id="backdrop">
+      <div id="modal"></div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ff2091991e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

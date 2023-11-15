@@ -1,0 +1,181 @@
+main#orders {
+  width: 75%;
+  margin: auto;
+}
+
+#orders-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  position: relative;
+  overflow: hidden;
+}
+
+#orders-loading {
+  display: flex;
+  height: 300px;
+}
+
+#orders-panel {
+  display: none;
+}
+
+#orders-panel h2 {
+  font-size: 24px;
+}
+
+#orders-loading,
+#orders-panel {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+/* Order List Control Button */
+
+#scroll-left-btn button,
+#scroll-right-btn button {
+  width: auto;
+  border: none;
+  background-color: transparent;
+}
+
+#scroll-left-btn button i,
+#scroll-right-btn button i {
+  font-size: 45px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--secondary-color);
+}
+
+#scroll-left-btn button i:hover,
+#scroll-right-btn button i:hover {
+  color: var(--secondary-color);
+  -webkit-text-stroke: 0;
+}
+
+/* Order List */
+
+#order-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Order List: Hiding Scrollbar */
+
+#order-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#order-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Order Card */
+
+#order-list .card-order {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 500px;
+  background-color: var(--third-color);
+  margin: 0 10px;
+  box-sizing: border-box;
+
+  border: 1px dashed var(--primary-color);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: opacity 0.25s;
+}
+
+.order-number {
+  background-color: var(--primary-color);
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-number p {
+  text-align: center;
+}
+
+.customer-info {
+  height: 150px;
+  text-align: center;
+}
+
+#order-list .customer-info h2 {
+  font-size: 24px;
+}
+
+.pizza-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#order-list .pizza-info h2 {
+  font-size: 18px;
+  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--third-color);
+}
+
+.pizza-options {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  border: 1px dashed var(--secondary-color);
+  color: var(--secondary-color);
+  font-family: inherit;
+  font-weight: 700;
+  transition: all 0.25s;
+  width: 125px;
+  text-align: center;
+}
+
+.card-order button {
+  border: none;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: var(--third-color);
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  height: 50px;
+}
+
+.card-order button:hover {
+  background-color: red;
+  color: var(--third-color);
+}
+
+/* Rotating Pizza */
+
+#rotate-order-img1,
+#rotate-order-img2 {
+  position: absolute;
+  bottom: -250px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#rotate-order-img1 {
+  left: -225px;
+}
+
+#rotate-order-img2 {
+  right: -225px;
+}

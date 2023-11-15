@@ -1,0 +1,336 @@
+/* Overall Layout */
+
+main#customize-pizza {
+  margin: auto;
+  width: 75%;
+}
+
+#pizza-style,
+#pizza-crust,
+#pizza-cheese,
+#delivery {
+  min-height: 350px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 20px 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#pizza-style-img,
+#pizza-crust-img,
+#pizza-cheese-img {
+  overflow: hidden;
+  position: relative;
+}
+
+#pizza-style-content,
+#pizza-crust-content,
+#pizza-cheese-content,
+#delivery {
+  flex: 7;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+#pizza-style-img,
+#pizza-crust-img,
+#pizza-cheese-img {
+  flex: 3;
+}
+
+#style-option-panel,
+#crust-option-panel,
+#cheese-option-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+
+.sub-heading {
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Style Section */
+
+.style-option {
+  width: 150px;
+}
+
+.style-option.selected {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.style-option:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.card-pizza {
+  width: 125px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-pizza img {
+  width: 125px;
+}
+
+/* Crust & Cheese Section */
+
+#pizza-crust {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+#pizza-crust-content {
+  border: solid var(--secondary-color);
+  border-radius: 20px 0 0 20px;
+  border-width: 1px 0 1px 1px;
+  background-color: var(--secondary-color);
+}
+
+#pizza-crust-content,
+#pizza-cheese-content {
+  flex: 1;
+}
+
+#pizza-crust-img,
+#pizza-cheese-img {
+  flex: 1;
+}
+
+#pizza-cheese-content {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+.crust-option,
+.cheese-option {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.crust-option,
+.cheese-option {
+  opacity: 0.5;
+}
+
+.crust-option:hover,
+.cheese-option:hover,
+.crust-option.selected,
+.cheese-option.selected {
+  opacity: 1;
+}
+
+/* Delivery Section */
+
+#delivery {
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../images/pizza_delivery.png");
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  border-width: 3px 3px 0 3px;
+  border-style: dashed;
+  border-color: var(--secondary-color);
+}
+
+#delivery button {
+  align-self: self-end;
+  margin-top: 10px;
+}
+
+#delivery button:hover,
+#modal button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+#contact-line1,
+#contact-line3 {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact-line1 div,
+#contact-line2,
+#contact-line3 div {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit-order-btn {
+  width: 200px;
+}
+
+/* Rotating Pizza */
+
+#rotate-style-img,
+#rotate-crust-img1,
+#rotate-crust-img2,
+#rotate-cheese-img1,
+#rotate-cheese-img2,
+#rotate-cheese-img3 {
+  position: absolute;
+  z-index: 1;
+}
+
+#rotate-style-img {
+  width: 450px;
+  top: 100px;
+  right: -200px;
+}
+
+#rotate-crust-img1 {
+  width: 100px;
+  top: 0;
+  left: 15px;
+}
+
+#rotate-crust-img2 {
+  width: 300px;
+  top: 20px;
+  left: 75px;
+}
+
+#rotate-cheese-img1 {
+  width: 150px;
+  top: 150px;
+  right: 10px;
+}
+#rotate-cheese-img2 {
+  width: 250px;
+  top: 30px;
+  right: 150px;
+}
+#rotate-cheese-img3 {
+  width: 75px;
+  top: 70px;
+  right: 75px;
+}
+
+@keyframes rotate-pizza {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+/* Modal: Confirm Order */
+
+#backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  display: none;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+  width: 500px;
+  height: 425px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  z-index: 100;
+  border: 1px dashed var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#modal button {
+  align-self: self-end;
+  margin-top: 20px;
+}
+
+#modal-pizza-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#modal-pizza-info h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+#modal-pizza-info h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+#modal-pizza-style {
+  width: 100%;
+}
+
+#modal-pizza-crust,
+#modal-pizza-cheese {
+  padding: 5px;
+  width: 150px;
+  margin: 5px;
+}
+
+#modal button.order-submitted-btn {
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* Error */
+
+.error {
+  background-color: red;
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+#error-style,
+#error-crust,
+#error-cheese,
+#error-delivery {
+  display: none;
+  margin: 0 0 20px 0;
+  background-color: red;
+  width: 200px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 700;
+  height: 20px;
+  align-self: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  main#customize-pizza {
+    width: 900px;
+  }
+}

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Thasadith:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #282f44;
+  --secondary-color: #ff5f00;
+  --third-color: black;
+
+  --font-heading: "Bruno Ace SC", cursive;
+  --font-body: "Thasadith", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--third-color);
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  font-family: var(--font-body);
+  min-width: 768px;
+  overscroll-behavior: none;
+}
+
+h1,
+h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  padding: 10px;
+  margin: 0;
+  background-color: transparent;
+  border: 1px dashed var(--secondary-color);
+  color: var(--secondary-color);
+  font-family: inherit;
+  font-weight: 700;
+  width: 125px;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+input,
+select {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-size: 20px;
+  font-family: inherit;
+  margin: 0 10px 10px 0;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#hero-banner {
+  width: 100%;
+  height: 350px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../images/hero-banner.jpg");
+  background-size: cover;
+  background-position: 20% 60%;
+}
+
+#title {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+header {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#navbar ul li {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px dashed var(--secondary-color);
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li:hover {
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+}
+
+#nav-desc {
+  display: none;
+  position: absolute;
+  left: 70px;
+}
+
+.text-stroke-orange {
+  color: transparent;
+  -webkit-text-stroke: 0.1px var(--secondary-color);
+}
+
+.text-stroke-blue {
+  color: transparent;
+  -webkit-text-stroke: 0.1px var(--primary-color);
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  border-top-color: var(--secondary-color);
+  animation: loader 0.5s infinite linear normal;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

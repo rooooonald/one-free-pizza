@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONE FREE PIZZA | Orders</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/orders.css" />
+  </head>
+  <body onload="initializeOrders()">
+    <div id="orders-page">
+      <header>
+        <div id="logo">
+          <h1>
+            ONE<br /><span class="text-stroke-orange">FREE</span><br />PIZZA
+          </h1>
+        </div>
+        <nav id="navbar">
+          <ul>
+            <li id="nav-customize"><i class="fa-solid fa-pizza-slice"></i></li>
+            <li id="nav-orders"><i class="fa-regular fa-clipboard"></i></li>
+            <p id="nav-desc"></p>
+          </ul>
+        </nav>
+      </header>
+      <section id="hero-banner">
+        <div id="title">
+          <h1>ORDERS</h1>
+        </div>
+      </section>
+      <main id="orders">
+        <div id="orders-loading"></div>
+        <div id="orders-panel">
+          <div id="scroll-left-btn">
+            <button onclick="scrollOrderList.toLeft()">
+              <i class="fa-regular fa-circle-left"></i>
+            </button>
+          </div>
+          <div id="order-list"></div>
+          <div id="scroll-right-btn">
+            <button onclick="scrollOrderList.toRight()">
+              <i class="fa-regular fa-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+      <img src="./images/pizza/pizza-lucca.png" id="rotate-order-img1" />
+      <img src="./images/pizza/pizza-pompei.png" id="rotate-order-img2" />
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ff2091991e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
