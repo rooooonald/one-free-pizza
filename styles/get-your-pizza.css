@@ -140,7 +140,7 @@ main#customize-pizza {
 #delivery {
   flex-direction: column;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("../images/pizza_delivery.png");
+    url("../images/pizza_delivery.jpg");
   background-size: cover;
   border-radius: 20px 20px 0 0;
   border-width: 3px 3px 0 3px;
